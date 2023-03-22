@@ -1,0 +1,725 @@
+:root{
+    --theme-color-primary:#1F8CDC;
+    --theme-color-grey:#6e6e6e;
+
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* ------- General Elements---- */
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.section {
+    transition: transform 1s, opacity 1s;
+}
+
+.section-header {
+    width: 100%;
+    color: Black;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* -------- Header -------*/
+
+.header {
+    background: transparent;
+}
+
+.nav{
+    width: 100%;
+    height: 80px;
+    line-height: 65px;
+    position: fixed;
+    text-align: center;
+    background: transparent;
+}
+
+.nav.sticky {
+    background-color: rgb(2, 60, 78);
+    z-index: 1;
+}
+
+.nav.sticky div.main_list ul li a:hover{
+    color: rgb(212, 212, 212);
+}
+
+.nav div.logo{
+    height: 10px;
+    position: absolute;
+    text-align: left;
+}
+
+.logo-link{
+    text-decoration: none;
+    color: #4d4d4d;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo-link.logoColor{
+    color: #ffffff;
+}
+
+.nav div.main_list{
+    width: 600px;
+    height: 100%;
+    float: right;
+}
+
+.nav div.main_list ul{
+    width:100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.nav div.main_list ul li{
+    width: 120px;
+    height: 100%;
+}
+
+.nav div.main_list ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 95px;
+    text-transform: uppercase;
+}
+
+.nav div.main_list ul li a:hover{
+    color: rgb(0, 0, 0);
+}
+
+.nav div.media_button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    display: none;
+}
+
+.nav div.media_button button.main_media_button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span{
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: #000000;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1){
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2){
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3){
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 20deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 2, -20deg);
+}
+
+
+/* --------Banner Container -------*/
+
+.banner-container,
+.services {
+    background-color: #3a95da41;
+    width: 100%;
+}
+
+.banner-container .container,
+.imageText .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-section{
+    margin-top: 3rem;
+    order:2;
+}
+
+.left-section::before{
+    content: " Best Style ";
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgb(191, 92, 237);
+    letter-spacing: 8px;
+}
+
+
+.left-section .caption {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 10px;
+}
+
+.caption .span-text{
+    color: rgb(210, 3, 3);
+    font-weight: 500;
+}
+
+.left-section hr {
+    border: 5px solid rgb(233, 192, 31);
+    border-radius: 25px;
+    width: 35%;
+    margin-top: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.left-section .social-icons {
+    justify-content: flex-start;
+}
+
+.social-icons a {
+    padding: 1.5rem 0;
+    color: #034465;
+    transition: all .2s smooth;
+}
+
+.social-icons i:hover{
+    transform: scale(1.3);
+}
+
+.right-section,
+.section .image-section {
+    width: 100%;
+    height: 100%;
+}
+
+.right-section img {
+    width: 100%;
+ }
+
+
+/* ------------ Features ---------- */
+.features {
+    padding: 3rem 1rem ;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+.cards ,
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.cards {
+    margin-top: 1rem;
+}
+
+.card {
+    flex-direction: column;
+    width: 100%;
+    /* height: 150px; */
+    text-align: center;
+}
+
+.card-image {
+    flex-direction: column;
+    box-shadow: 1px 2px 3px 1px #a4a4a4; 
+    padding: 1.5rem;
+    color: azure;
+    background-color: #034465;
+    border-radius: 50%;
+    width : 100px;
+    height: 100px;
+}
+
+.card .card-text {
+    height:50px;
+}
+
+.card .card-text h2{
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* --------- Section 3 Image Text -------- */
+
+.imageText .image-section img  {
+    width: 100%;
+    height: 100%;
+}
+
+.imageText .text-section {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.imageText .text-section h1 {
+    font-size: 1rem;
+    font-weight: 200;
+    padding-bottom: 1rem;
+}
+
+.imageText .text-section p {
+    font-size: 0.85rem;
+}
+
+.imageText .text-section .span-text {
+    color: #F56801;
+}
+
+/* --------- Services ------------- */
+
+.services {
+    padding-bottom: 4rem;
+    margin-top: 2rem;
+}
+
+.services .cards {
+    padding: 0 1rem;
+}
+
+.services .card-image {
+    width: 100%;
+    height: fit-content;
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    border-radius: 0;
+}
+
+.services .card-image img{
+    width: 100%;
+}
+
+.services .card-image h3 {
+    padding-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* ---------- section 5 ImageText ---------- */
+.imageText .container
+.imageText .text-section .span-text-blue{
+    color: rgb(166, 86, 247);
+}
+
+.imageText .text-section .span-text-green{
+    color: rgb(50, 200, 4);
+}
+
+.imageText .text-section h1 {
+    padding : 1.5rem 0;
+}
+
+.imageText .container .text-section:first-child {
+    order: -1;
+}
+
+/* -------- About Us -------*/
+
+.about{
+    background-image: url(/assets/images/shop/2022-11-05.jpg);
+    background-clip: border-box;
+    background-size: max(100%, 70vw) 150%;
+    background-repeat: no-repeat;
+    text-align: justify;
+    color: white;
+    position: relative;
+    isolation: isolate;
+    padding: max(2rem, 10%);
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.682);
+    z-index: -1;
+}
+
+.about .text-section h1 {
+    font-size: max(2rem, 50%);
+    text-align: center;
+    padding-bottom: max(2rem, 30px);
+}
+
+
+
+/* -------- Brands ----------- */
+
+.brands-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap : 1rem;
+    padding-block: 2rem;
+}
+
+.brands-container img {
+    width: 10%;
+}
+
+/* -------- Footer -------*/
+.footer .container {
+    background-color: #023c4e;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.footer-info {
+    padding-top: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 max(1rem, 5vw);
+}
+
+.footer-link a {
+    color: #ffffff;
+}
+
+.footer-link a:hover {
+    color: #beb9b9;
+}
+
+.footer .social-icons {
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.footer .social-icons span{
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-weight: 200;
+}
+
+.contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+.address,
+.phone{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 0.5rem;
+    width: 300px;
+    height: 100px;
+}
+
+.address {
+    gap : 2.5rem
+}
+
+.map-iframe{
+    width:100%;
+    height: 100%;
+    border: none;
+    padding-inline: 3rem;
+}
+
+/* --------- Media Queries ------------ */
+
+@media (max-width:767px) {
+    .nav div.logo{
+        margin-left: 15px;
+    }
+    
+    .nav div.main_list{
+        width: 100%;
+        margin-top: 65px;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .nav div.show_list{
+        height: 200px;
+    }
+    
+    .nav div.main_list ul{
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        top: 80px;
+        right: 0;
+        left: 0;
+    }
+    
+    .nav div.main_list ul li{
+        width: 100%;
+        height: 40px;
+        background-color:rgba(6, 6, 6, 0.557);
+    }
+    
+    .nav div.main_list ul li a{
+      text-align: center;
+        line-height: 40px;
+        width: 100%;
+        height: 40px;
+        display: table;
+    }
+    
+    .nav div.media_button{
+        display: block;
+    }
+
+    .left-section{
+        padding-left: 1rem;
+    }
+
+    .imageText .text-section h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .card-image{
+        padding: 0.6rem;
+        width : 70px;
+        height: 70px;
+    }
+
+    .services .cards {
+        flex-wrap: wrap;
+        flex-direction:column ;
+        padding: 0 2rem;
+        gap: 0.9rem;
+    }
+
+    .imageText .container .text-section:first-child {
+        order: 2;
+    }
+
+    .map-iframe{
+        padding-inline: 0;
+    }
+
+}
+
+ @media (min-width:768px) and (max-width:1024px) {
+
+    .section,
+    .footer .container {
+        padding-inline: 2rem;
+    }
+
+    .nav div.logo{
+        margin-left: 2rem;
+        padding-top: 1rem;
+    }
+
+    .banner-container .container,
+    .imageText .container{
+        flex-wrap: nowrap;
+    }
+
+    .left-section::before{
+        font-size: 1rem;
+    }
+
+    .left-section{
+        margin-top: 3rem;
+        padding-left: 2rem;
+        width: 50%;
+    }
+    
+    .left-section .caption {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        letter-spacing: 6px;
+    }
+
+    .right-section{
+        order:2;
+    }
+
+    .imageText .text-section {
+        padding: 1.5rem;
+    }
+    
+    .imageText .text-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        padding: 2rem;
+        line-height: 1.3rem;
+        font-size: 0.85rem;
+    }
+    
+ }
+
+ @media (min-width:1025px) {
+
+    .section,
+    .footer .container {
+        padding-inline: 15rem;
+    }
+
+    .nav div.logo{
+        margin-top: 15px;
+    }
+
+    .nav {
+        padding-inline: 15rem;
+    }
+
+    .banner-container .container,
+    .imageText .container{
+        flex-wrap: nowrap;
+        height: 70vh;
+    }
+
+    .left-section::before{
+        font-size: 1.5rem;
+    }
+
+    .left-section{
+        margin-top: 3.5rem;
+        padding-left: 15rem;
+        width: 65%;
+    }
+    
+    .left-section .caption {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        letter-spacing: 6px;
+    }
+
+    .right-section{
+        order:2
+    }
+
+    .banner-container .right-section img {
+        height: 70vh;
+     }
+
+    .imageText .text-section {
+        padding: 1.5rem 3rem;
+    }
+    
+    .imageText .text-section h1 {
+        font-size: 3.5rem;
+    }
+    
+    .imageText .text-section p {
+        font-size: 1rem;
+    }
+
+    .cards {
+        margin-top: 1rem;
+    }
+
+    .about .text-section {
+        /* width : 100%; */
+        padding-inline: 13rem;
+    }
+
+    .about {
+        padding: 5rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .footer-map,
+    .contact-details{
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+    }
+
+    .brands-container {
+        padding-block: 6rem;
+    }
+
+ }
