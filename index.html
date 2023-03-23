@@ -27,19 +27,19 @@
                         <a class="logo-link" href="#">BLUERAY OPTICS</a>
                     </div>
                     <div class="main_list" id="mainListDiv">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Brands</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                        <ul class="nav-links">
+                            <li><a class="nav-link" href="#section--1">Home</a></li>
+                            <li><a class="nav-link" href="#section--6">About</a></li>
+                            <li><a class="nav-link" href="#section--8">Brands</a></li>
+                            <li><a class="nav-link" href="#section--4">Services</a></li>
+                            <li><a class="nav-link" href="#section--10">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="media_button">
-                        <button class="main_media_button" id="mediaButton">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                    <div class="media-button">
+                        <button class="main-media-button" id="mediaButton">
+                            <span class="media-button-span" ></span>
+                            <span class="media-button-span"></span>
+                            <span class="media-button-span"></span>
                         </button>
                     </div>
                 </div>
@@ -52,14 +52,16 @@
         <section id="section--1" class="banner-container">
             <div class="container">
                 <div class="left-section">
-                    <h1 class="caption text-upper">
-                        Heavy on <span class="caption text-upper h1-inline">
-                            features</span></h1>
-                    
-                        <h1 class="caption text-upper"><span class="span-text">light</span> <span class="caption text-upper h1-inline">
-                            on price</span></h1>
+                    <h1 class="animate-reveal animate-first">
+                        <span class="caption text-upper">Heavy on </span> 
+                        <span class="caption text-upper">                           features</span>
+                    </h1>
+                    <h1 class="animate-reveal animate-second">
+                        <span class="caption text-upper span-text">light</span> 
+                        <span class="caption text-upper"> on price</span>
+                    </h1>
                     <hr>
-                    <div class="social-icons">
+                    <div class="social-icons animate-reveal animate-third">
                         <a href="#"><span><i class="fa-brands fa-facebook-f fa-xl"></i></span></a>
                         <a href="#"><span><i class="fa-brands fa-instagram fa-xl"></i></span></a>
                         <a href="#"><span><i class="far fa-envelope fa-xl"></i></span></a>
@@ -127,14 +129,16 @@
                 <div class="cards">
                     <div class="card">
                         <div class="card-image">
-                            <img src="assets/images/beautiful-stylish-woman-hat-sunglasses-posing-pink-red-wall.jpg" loading="lazy" alt="">
+                            <img class="visible-image img--1" src="assets/images/beautiful-stylish-woman-hat-sunglasses-posing-pink-red-wall.jpg" loading="lazy" alt="">
+                            <img  class="invisible-image" src="assets/images/colored-transparent-sunglasses-still-life.jpg" loading="lazy" alt="">
                             <h3> Sunglasses </h3>
                         </div>
                     </div>
     
                     <div class="card">
                         <div class="card-image">
-                            <img src="assets/images/young-woman-holding-contact-lenses-cases-lens-front-her-face-white-background-eyesight-ophthalmology-concept.jpg" loading="lazy" alt="">
+                            <img class="visible-image img--2" src="assets/images/young-woman-holding-contact-lenses-cases-lens-front-her-face-white-background-eyesight-ophthalmology-concept.jpg" loading="lazy" alt="">
+                            <img  class="invisible-image" src="assets/images/high-angle-pair-contact-lenses-with-case-tweezers.jpg" loading="lazy" alt="">
                             <h3> Lenses </h3>
                         </div>
                     </div>
@@ -142,14 +146,16 @@
                 <div class="cards">    
                     <div class="card">
                         <div class="card-image">
-                            <img src="assets/images/portrait-handsome-confident-stylish-hipster-lambersexual-model-sexy-modern-man-dressed-elegant-beige-suit-fashion-male-posing-studio-near-blue-wall.jpg" loading="lazy" alt="">
+                            <img class="visible-image img--3" src="assets/images/portrait-handsome-confident-stylish-hipster-lambersexual-model-sexy-modern-man-dressed-elegant-beige-suit-fashion-male-posing-studio-near-blue-wall.jpg" loading="lazy" alt="">
+                            <img  class="invisible-image" src="assets/images/eyeglasses-wear.jpg" loading="lazy" alt="">
                             <h3> Frames </h3>
                         </div>
                     </div>
     
                     <div class="card">
                         <div class="card-image">
-                            <img src="assets/images/cute-little-girl-holding-books-isolated-studio.jpg" loading="lazy" alt="">
+                            <img class="visible-image img--4" src="assets/images/cute-little-girl-holding-books-isolated-studio.jpg" loading="lazy" alt="">
+                            <img  class="invisible-image" src="assets/images/sunglasses-confetti-isolated-background.jpg" loading="lazy" alt="">
                             <h3> Kids Glasses </h3>
                         </div>
                     </div>
@@ -181,7 +187,7 @@
         </section>
         
         <!--------- Image Text ---------->
-        <section id="section--5" class="section imageText">
+        <section id="section--7" class="section imageText">
             <div class="container">
                 <div class="image-section">
                     <img src="assets/images/sunglasses(3).jpg" loading="lazy" alt="">
@@ -192,8 +198,8 @@
             </div>
         </section>
         
-        <!-- ------------ Logos ----------------------- -->
-        <section class="section brands">
+        <!-- ------------ Brands ----------------------- -->
+        <section id="section--8" class="section brands">
             <div class="container">
                 <div class="brands-container">
                     <img src="assets/images/brands/Adidas-ts1635091306.svg" alt="">
@@ -239,7 +245,7 @@
 
     <footer class="footer">
         <div class="container">
-            <div id="contact" class="footer-map">
+            <div id="section--10" class="footer-map">
                 <div class="contact-details">
                     <div class="address">
                         <span><i class="fas fa-map-marker-alt fa-3x"></i></span>
