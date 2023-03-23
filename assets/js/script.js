@@ -71,6 +71,8 @@ navLinks.addEventListener('click', function (e) {
     removeNavLinkClick();
 
     e.target.classList.add('clicked');
+    mainListDiv.classList.remove("show_list");
+    mediaButton.classList.remove("active");
     if (e.target.classList.contains('nav-link')) {
         const id = e.target.getAttribute('href');
         document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
