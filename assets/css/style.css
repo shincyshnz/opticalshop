@@ -51,6 +51,19 @@ li {
     transform: translateY(8rem);
   }
 
+/* --------- Whatsapp ------ */
+
+.whatsapp{
+    position: fixed;
+    top: 85vh;
+    right: 0;
+}
+
+.wa-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
 /* -------- Header -------*/
 
 .nav{
@@ -745,6 +758,11 @@ li {
 
     .brands-container {
         padding-block: 6rem;
+    }
+
+    .wa-icon {
+        width: 5rem;
+        height: 5rem;
     }
 
  }
